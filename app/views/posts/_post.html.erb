@@ -1,0 +1,13 @@
+<div class="col-md-4 col-sm-4 col-xs-12">
+  <div class="project-discussion">
+    <%= image_tag(post.banner_image, :alt => "Picture", :size => "349x75") %><br>
+    <p>Published <%= post.published_at.strftime("%d %B %Y") %></p>
+    <h3><%= link_to post.title.titleize, post %></h3>
+    <p class="project-desc">
+      <%= truncate(post.description.gsub(/<.+?>/, ''), length: 120) %>
+      <%= link_to '...Read more', post_path(post) %>
+    </p>
+    <div class="clearfix"></div>
+  </div>
+</div>
+
