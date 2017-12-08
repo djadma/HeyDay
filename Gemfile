@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'activeadmin'
 gem 'devise'
-gem 'bootstrap', '~> 4.0.0.alpha5'
+# gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'carrierwave', '~> 1.0'
 gem 'ckeditor'
 gem 'mini_magick'

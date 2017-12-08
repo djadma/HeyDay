@@ -12,8 +12,25 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 //= require bootstrap.min
 //= require jquery.min
 //= require typed
+//= require homes
+
+function tawk_chat(){
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5a2a314ad0795768aaf8e0df/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+}
+
+$(document).on("ready page: Load", function() {
+  tawk_chat();
+});
+
