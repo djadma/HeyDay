@@ -24,6 +24,6 @@ test:
   <<: *default
   database: New_web_test
 
-# production:
-#   <<: *default
-#   database: db/production.sqlite3
+production:
+  <<: *default
+  database: New_web_production
