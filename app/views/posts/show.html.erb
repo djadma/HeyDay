@@ -16,7 +16,7 @@
       <br>
       <hr>
       <!-- Post Content -->
-        <p class="lead"><%= raw @post.description %></p>
+        <p class="lead"><%= @post.description.html_safe %></p>
         
 
         <!-- Single Comment -->

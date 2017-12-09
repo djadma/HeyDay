@@ -45,5 +45,8 @@ class BannerImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+  def default_url
+    "/assets/default.jpg"
+  end
 
 end
