@@ -87,30 +87,31 @@ h1, h2, h3, h4, h5, h6{
  -o-animation: blink 0.7s infinite;
  animation: blink 0.7s infinite;
 }
+
 @-keyframes blink{
- 0% { opacity:1; }
- 50% { opacity:0; }
- 100% { opacity:1; }
+ 0% { opacity:1 }
+ 50% { opacity:0 }
+ 100% { opacity:1 }
 }
 @-webkit-keyframes blink{
- 0% { opacity:1; }
- 50% { opacity:0; }
- 100% { opacity:1; }
+ 0% { opacity:1 }
+ 50% { opacity:0 }
+ 100% { opacity:1 }
 }
 @-moz-keyframes blink{
- 0% { opacity:1; }
- 50% { opacity:0; }
- 100% { opacity:1; }
+ 0% { opacity:1 }
+ 50% { opacity:0 }
+ 100% { opacity:1 }
 }
 @-ms-keyframes blink{
- 0% { opacity:1; }
- 50% { opacity:0; }
- 100% { opacity:1; }
+ 0% { opacity:1 }
+ 50% { opacity:0 }
+ 100% { opacity:1 }
 }
 @-o-keyframes blink{
- 0% { opacity:1; }
- 50% { opacity:0; }
- 100% { opacity:1; }
+ 0% { opacity:1 }
+ 50% { opacity:0 }
+ 100% { opacity:1 }
 }
 
 /** style end for the typing text **/
