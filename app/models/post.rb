@@ -4,7 +4,7 @@ class Post < ApplicationRecord
 	default_scope { order(created_at: :desc) }
   scope :ordered_by_title, -> { reorder(title: :asc) }
   extend FriendlyId
-  friendly_id :title, use: :slugged
+  friendly_id :title, :use => [:slugged, :finders]
  
  def self.recent(max = 5)
     limit(max).order(created_at: :desc)
