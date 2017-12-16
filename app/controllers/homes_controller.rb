@@ -10,5 +10,5 @@ class HomesController < ApplicationController
 	def sitemap; end
 
 	def career; end
-		
+	
 end

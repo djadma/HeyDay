@@ -1,10 +1,8 @@
 <div class="container">
   <div class="row">
-    
     <!-- Post Content Column -->
     <div class="col-lg-8">
-    
-      <!-- Title -->
+    <!-- Title -->
       <h1 class="mt-4"><%= link_to @post.title%></h1>
       <!-- Author -->
       <p class="lead"></p>
@@ -12,13 +10,15 @@
        <!-- Date/Time -->
       <b>Posted on <%= @post.published_at.strftime("%d %B %Y") %><br></b>
       <hr>
-      <%= image_tag(@post.banner_image, :alt => "Picture", class: "img-fluid rounded", :size => "700x400") %>
+      <div class="img-fluid rounded">
+        <%= image_tag(@post.banner_image, :alt => "Picture", class: "center-block img-responsive", :size => "700x400") %>
+      </div>
       <br>
       <hr>
       <!-- Post Content -->
         <p class="lead"><%= @post.description.html_safe %></p>
         
-
+        <%= social_share_button_tag(@post.title, :url => post_url(@post), description: @post.title) %>
         <!-- Single Comment -->
           <div class="media mt-4">
             <h5 class="mt-0">Comments:</h5>

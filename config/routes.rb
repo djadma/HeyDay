@@ -8,7 +8,12 @@ Rails.application.routes.draw do
   get 'work', to: 'homes#work', as: 'work'
   get 'sitemap', to: 'homes#sitemap', as: 'sitemap'
   get 'career', to: 'homes#career', as: 'career'
+
   resources :posts do
   	resources :comments
   end
+  
+  get 'contact', to: 'contacts#new', as: 'contact'
+  post 'contact', to: 'contacts#create'
+  post 'message', to: 'contacts#message'
 end

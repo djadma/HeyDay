@@ -1,17 +1,17 @@
 <div class="col-md-6">
-<h5 class="mt-0">Leave comments:</h5>
+<h5 class="mt-0">Leave Comment:</h5>
 <%= form_for [@post,  @post.comments.new] do |f| %>
   <div class="form-group">
 	<%= f.label :comments %>
-	<%= f.text_area :message, class: "form-control", rows: "3" %><br>
+	<%= f.text_area :message, class: "form-control", rows: "3", required: :true %><br>
   </div>
   <div class="form-group">
    <%= f.label :name %>
-   <%= f.text_field :name, class: "form-control" %><br>
+   <%= f.text_field :name, class: "form-control", required: :true %><br>
    </div>
    <div class="form-group">
    <%= f.label :email %>
-   <%= f.email_field :email, class: "form-control" %>
+   <%= f.email_field :email, class: "form-control", required: :true %>
    </div>
 
     <div class="form-group">

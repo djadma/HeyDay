@@ -17,6 +17,7 @@
 //= require jquery.min
 //= require typed
 //= require homes
+//= require social-share-button
 
 function tawk_chat(){
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
