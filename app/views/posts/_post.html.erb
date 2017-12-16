@@ -4,9 +4,8 @@
     <b>Published <%= post.published_at.strftime("%d %B %Y") %></b>
     <h1><%= link_to post.title.titleize, post, class: "project-title" %></h1>
     
-      <%= truncate(post.description.html_safe, length: 120) %>
+      <%= post.description.truncate(120).html_safe %>
       <%= link_to '...Read more', post_path(post) %>
   
   </div>
 </div>
-
