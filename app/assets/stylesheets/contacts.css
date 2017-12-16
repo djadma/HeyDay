@@ -1,0 +1,59 @@
+.contact-form, .contact-add-box {
+  background-color: #EFEFEF;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+.contact-section h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #af0808;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.form-control {
+  height: 45px;
+  border: 1px solid #242424;
+  border-radius: 0px;
+  font-size: 16px;
+  color: #242424;
+  padding: 0 10px 0 20px;
+}
+.contact-form textarea.form-control {
+  height: 140px;
+  resize: inherit;
+  border-radius: 0px;
+}
+.comment-box {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.contact-btn {
+  border: 2px solid transparent;
+  background-color: #AF0808;
+  color: #fff;
+  margin-top: 10px;
+  padding: 12px 20px 10px 20px;
+  font-size: 20px;
+  outline: none;
+}
+
+/* Contact Add Box  */
+.address-details {margin-top:45px;margin-bottom:45px;}
+.contact-add-box ul {
+    list-style:none;
+    font-size:15px;
+    font-weight:500;
+    line-height:25px;
+}
+.contact-add-box i { 
+    color: #af0808;
+    padding-right:10px;
+}
+
+ .btn{
+  padding: 9px 12px !important;
+  margin-top: 15px !important;
+ }
