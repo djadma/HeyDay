@@ -1,6 +1,6 @@
 <div class="col-md-4 col-sm-4 col-xs-12">
   <div class="project-discussion">
-    <%= image_tag(post.banner_image, :alt => "Picture", :size => "349x75", class: "center-block img-responsive") %><br>
+    <%= image_tag(post.banner_image, :alt => "Picture", class: "center-block img-responsive") %><br>
     <b>Published <%= post.published_at.strftime("%d %B %Y") %></b>
     <h1><%= link_to post.title.titleize, post, class: "project-title" %></h1>
     
