@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .main-navigation{
-	background-color: #f8f63c;
+	background-color: #192742;
 	color: #fff;
 	border: none;
 	border-radius: 0;
@@ -47,10 +47,10 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .top-navi-list li.active a{
-  background-color: #fff !important;
+  background-color: #999999 !important;
 }
 .top-navi-list li a{
-  color: #333 !important;
+  color: #FFFFFF !important;
   font-weight: bolder;
   outline: none;
   font-size: 15px;
@@ -108,13 +108,13 @@ animation: blink 0.7s infinite;
 /** style end for the typing text **/
 
 .btn-start{
-  background-color: #f8f63c;
+  background-color: #192742;
   height: 50px;
   border: none;
   text-align: center;
   font-size: 20px;
   margin-top: 10px;
-  color: #333;
+  color: #FFFFFF;
 }
 .how-we-work-section{
   background-color: #f8f0e9;
@@ -193,17 +193,17 @@ animation: blink 0.7s infinite;
   text-align: center;
 }
 .footer-part button{
-  background-color: #f8f63c;
+  background-color: #192742;
   height: 50px;
   border: none;
-  color: #333;
+  color: #FFFFFF;
   text-align: center;
   font-size: 20px;
   margin-top: 10px;
 }
 .btm-footer-row{
   margin-top: 20px;
-  margin-left: 0;
+  margin-left: 39px;
   margin-right: 0;
 }
 .btm-footer-row ul li a{
@@ -273,7 +273,7 @@ animation: blink 0.7s infinite;
 .services-banner h1 em{
   font-style: normal;
   font-family: 'ProximaNovaA-Light';
-  color: #f8f63c;
+  color: #f18621;
 }
 .services-banner h3{
   margin-top: 0;
@@ -361,13 +361,13 @@ animation: blink 0.7s infinite;
 .our-work-banner h1 em{
   font-style: normal;
   font-family: 'ProximaNovaA-Light';
-  color: #f8f63c;
+  color: #f18621;
 }
 .our-work-banner h3{
   margin-top: 0;
 }
 .our-work-content{
-  background-color: #f4f0ed;
+  /*background-color: #f4f0ed;*/
   padding: 40px 0;
 }
 .our-work-content h1{
@@ -477,25 +477,66 @@ animation: blink 0.7s infinite;
  text-decoration: underline;
 }
 
-a, a:link, a:visited {
+ a:visited {
+  text-decoration: none;
+  
+}
+
+a, a:link{
+  color: #f18621;
   text-decoration: none;
 }
 
-
-/*ul {
-    list-style-type: none;
-    margin: 12;
-    padding: 0;
-}
-.thumbnail{
-  margin-top: 15px !important;
-  height: 287px !important;
-
+.all-post{
+  padding-bottom: 30px;
 }
 
+.icon{
+  padding-top: 13px;
+}
 
-.thumbnail>img {
-    max-width: 85% !important;
-    height: 118px !important;
-}*/
+.icon a {
+  color: #FFFFFF !important;
+}
+
+.heyday-logo img{
+  width: 130px;
+}
+
+.recentpost{
+  padding-top: 155px;
+}
+
+
+.comment-form {
+  width: 58%;
+  margin-left: -16px;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+ }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.blog a{
+  color: #F18642;
+  text-decoration: none;
+}
+
+.pagination>.active>span {
+  background-color: #f18642 !important;
+  border-color: #F18642 !important;
+  color: none;
+}
+
+.blog-head h1{
+  color: #F18642;
+}
+
 /** CSS for the careers page begin **/
