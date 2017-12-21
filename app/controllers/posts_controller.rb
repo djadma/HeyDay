@@ -6,6 +6,5 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.friendly.find(params[:id])
-		@recent_posts = Post.friendly.recent
 	end
 end
