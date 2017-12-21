@@ -10,20 +10,20 @@
 				</div>
 				<span id="typed" style="white-space:pre;"></span>
 			</div>
-			<button class="btn btn-start">
-				Let's start a tour!
-			</button>
+
+				<a href="#image"  class="btn btn-start tour">Let's start a tour!</a> 
+
 		</div>
 	</div>
 </section><!--middle-section end -->
 
-<section class="how-we-work-section"><!--how-we-work-section start -->
+<section class="how-we-work-section" id="image"><!--how-we-work-section start -->
 	<div class="container">
 		<h1>
 			How <strong>HeyDay Technologies</strong> work?
 		</h1>
 		<div class="row">
-			<div class="how-we-work-img">
+			<div class="how-we-work-img" >
 				<img src="/assets/how-we-work.png" class="img-responsive center-block" alt="How we work">
 			</div>
 		</div>
@@ -103,13 +103,9 @@
 							Awesome team and Quick communication, They helped me to build my Web App “Also helped me how I can brand my web app, Now My app has 60,000 Users, and I would love to recommend HeyDay Technologies Team.
 
 							<span><strong>Mr. Gorge</strong>Social App, USA</span>
-						</p>
-                
+						</p>                
 					</div>
-
-				</div>
-
-            
+				</div>           
 			</div>
 		</div>
 	</div>
@@ -120,29 +116,29 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script>
 	$(function(){
-
-			$("#typed").typed({
-					// strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
-					stringsElement: $('#typed-strings'),
-					typeSpeed: 100,
-					backDelay: 500,
-					loop: false,
-					contentType: 'html', // or text
-					// defaults to false for infinite loop
-					loopCount: false,
-					callback: function(){ foo(); },
-					resetCallback: function() { newTyped(); }
-				});
-
-			$(".reset").click(function(){
-					$("#typed").typed('reset');
-				});
-
+		$("#typed").typed({
+			stringsElement: $('#typed-strings'),
+			typeSpeed: 100,
+			backDelay: 500,
+			loop: false,
+			contentType: 'html', // or text
+			// defaults to false for infinite loop
+			loopCount: false,
+			callback: function(){ foo(); },
+			resetCallback: function() { newTyped(); }
 		});
+
+		$(".reset").click(function(){
+			$("#typed").typed('reset');
+		});
+	});
 	function newTyped(){ /* A new typed object */ }
 
 	function foo(){ console.log("Callback"); }
-</script>
 
-</body>
-</html>
+	// $(".tour").click(function() {
+ //    $('html, body').animate({
+ //      scrollTop: $("#image").offset().top
+ //    }, 2000);
+ //  });
+</script>

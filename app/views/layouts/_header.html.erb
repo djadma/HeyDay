@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default main-navigation">
+<nav class="navbar navbar-default main-navigation" id="header">
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -9,7 +9,7 @@
 				<span class="icon-bar"></span>
 			</button>
 			
-			<%= link_to image_tag("/assets/2_main.png", alt: "hts logo"),"/" , {class: 'navbar-brand main-logo'} %>
+			<%= link_to image_tag("/assets/2_main.png", alt: "heydaylogo"),"/" , {class: 'navbar-brand heyday-logo'} %>
 			
 		</div>
 
@@ -20,12 +20,12 @@
 				</li>
 				<li class="<%= active_class('/aboutUs') %>"><%= link_to 'About Us', '/aboutUs' %></li>
 				<li class="<%= active_class('/services') %>"><%= link_to 'Services', '/services' %></li>
-				<li class="<%= active_class('/work') %>"><%= link_to 'Work', '/work'%></li>
+				<li class="<%= active_class('/work') %>"><%= link_to 'Portfolio', '/work'%></li>
 				<li class="<%= active_class('/career') %>"><%= link_to 'Careers', '/career' %></li>
 				<li class="<%= active_class('/contact') %>"><%= link_to 'Contact Us', '/contact' %></li>
 				<li class="<%= active_class(controller: 'posts', action: 'index') %>"><%= link_to 'Blog', '/posts' %></li>
 			</ul>
-          
+      <div class="icon">
 			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<a href="https://www.facebook.com/heydaytechnologies/" target="_blank">
@@ -48,7 +48,7 @@
 					</a>
 				</li>
 			</ul>
+			</div>
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
 </nav>
-
