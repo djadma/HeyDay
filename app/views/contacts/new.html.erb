@@ -9,15 +9,15 @@
             <div class="row">
               <div class="comment-box"></div>
               <div class="col-md-6 form-group">
-               <%= f.text_field :name, class: "form-control", placeholder: "Name", type:"text"%>
+               <%= f.text_field :name, class: "form-control", placeholder: "Name", type:"text", required: :true%>
               </div> 
               <div class="col-md-6 form-group">
-                <%= f.text_field :email, class: "form-control", placeholder: "Email", type:"text"%>
+                <%= f.text_field :email, class: "form-control", placeholder: "Email", type:"text", required: :true%>
               </div>
               <label class="col-md-12 control-label" for="textarea"></label>
 
               <div class="col-md-12">
-                <%= f.text_area :message, class: "form-control", id: "textarea"%>
+                <%= f.text_area :message, class: "form-control", id: "textarea", required: :true%>
               </div>
               <div class="col-md-8 text-left">
                <%= f.submit "send message", class: "btn btn btn-warning"%>
@@ -28,78 +28,59 @@
       </div>
       <div class="col-md-6 col-sm-12">
         <div class="contact-add-box">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.14321428899!2d75.85751045017264!3d22.6857119850516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcf129c55555%3A0x1d900acb06ce2221!2sHeyDay+technologies!5e0!3m2!1sen!2sin!4v1513262323169" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-
           <ul class="address-details">
-            <h3>Our office address</h3>
-            <li><i class="glyphicon glyphicon-map-marker"></i> M14, HeyDay Technologies</li>
-            <li><i class="glyphicon glyphicon-map-marker"></i>Mangal Nagar Road</li>
-            <li><i class="glyphicon glyphicon-map-marker"></i>Indore, Madhya Pradesh 452014</li>
+            <h3>Our Address</h3>
+            <li><i class="glyphicon glyphicon-map-marker"></i> M14, HeyDay Technologies Mangal Nagar Road Indore,<br> Madhya Pradesh India.</li>
+            <li><i class="fa fa-phone"></i> +91 14344 </li>
+            <li><i class="glyphicon glyphicon-envelope"> </i>hello@heydaytechnologies.com</li>
           </ul>
         </div>
       </div>
+      <div id="map"></div>
     </div>
   </div>
 </section>
 
+<script>
+  function initMap() { 
+    var uluru = {lat: 22.685712, lng: 75.8597045};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: uluru
+    });
+    
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+    var infowindow = new google.maps.InfoWindow();
+    var service = new google.maps.places.PlacesService(map);
+      service.getDetails({
+        placeId: 'ChIJ2QkpKPH8YjkRaHR6Jih5hIw'
+      }, 
+      function(place, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+          var marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location
+          });
+          google.maps.event.addListener(marker, 'click', function() {
+            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+              'Place ID: ' + place.place_id + '<br>' +
+              place.formatted_address + '</div>');
+            infowindow.open(map, this);
+          });
+        }
+      });
+    }
+  
+</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8LdHtj702KCU9rC9oSH2CshQABhHS5J0&callback=initMap&libraries=places">
+</script>
+
 <style type="text/css">
-  .contact-form, .contact-add-box {
-  /*background-color: #EFEFEF;*/
-  margin-bottom: 30px;
-  padding: 30px;
-}
-.contact-section h4 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #af0808;
-  font-weight: 600;
-  text-transform: capitalize;
-}
-.form-control {
-  height: 45px;
-  border: 1px solid #242424;
-  border-radius: 0px;
-  font-size: 16px;
-  color: #242424;
-  padding: 0 10px 0 20px;
-}
-.contact-form textarea.form-control {
-  height: 140px;
-  resize: inherit;
-  border-radius: 0px;
-}
-.comment-box {
-  color: #fff;
-  font-size: 16px;
-  line-height: 1.5em;
-  font-weight: 500;
-  text-transform: capitalize;
-}
-.contact-btn {
-  border: 2px solid transparent;
-  background-color: #AF0808;
-  color: #fff;
-  margin-top: 10px;
-  padding: 12px 20px 10px 20px;
-  font-size: 20px;
-  outline: none;
-}
-
-/* Contact Add Box  */
-.address-details {margin-top:45px;margin-bottom:45px;}
-.contact-add-box ul {
-    list-style:none;
-    font-size:15px;
-    font-weight:500;
-    line-height:25px;
-}
-.contact-add-box i { 
-    color: #af0808;
-    padding-right:10px;
-}
-
- .btn{
-  padding: 9px 12px !important;
-  margin-top: 15px !important;
- }
+  .marker{
+    color: ;
+  }
 </style>
