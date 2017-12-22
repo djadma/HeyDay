@@ -214,6 +214,11 @@ animation: blink 0.7s infinite;
   font-size: 16px;
 }
 
+.footer-link a{
+  color: #f18621;
+  text-decoration: none;
+}
+
 /** About Us page's css start **/
 
 .about-middle{
@@ -337,6 +342,10 @@ animation: blink 0.7s infinite;
   background: #f8f63c;
   border-color: #f8f63c;
   outline: #f8f63c;
+}
+
+.services-link a{
+  color: #192742;
 }
 
 /* css for the services page end */
@@ -482,11 +491,6 @@ animation: blink 0.7s infinite;
   
 }
 
-a, a:link{
-  color: #f18621;
-  text-decoration: none;
-}
-
 .all-post{
   padding-bottom: 30px;
 }
@@ -525,7 +529,7 @@ html, body {
 }
 
 .blog a{
-  color: #F18642;
+  color: #192742;
   text-decoration: none;
 }
 
@@ -533,10 +537,16 @@ html, body {
   background-color: #f18642 !important;
   border-color: #F18642 !important;
   color: none;
+  text-decoration-color: #f18621 !important;
 }
 
-.blog-head h1{
-  color: #F18642;
+.address {
+  margin-left: 28px;
+}
+
+.btn-warning {
+  background-color: #f18642 !important;
+  border-color: #f18642 !important;
 }
 
 /** CSS for the careers page begin **/
