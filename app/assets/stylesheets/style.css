@@ -24,17 +24,17 @@
 /** font family **/
 
 body{
-	font-family: 'ProximaNovaA-Light';
+  font-family: 'ProximaNovaA-Light';
 }
 h1, h2, h3, h4, h5, h6{
   font-family: 'Roboto-Bold';
 }
 
 .main-navigation{
-	background-color: #192742;
-	color: #fff;
-	border: none;
-	border-radius: 0;
+  background-color: #192742;
+  color: #fff;
+  border: none;
+  border-radius: 0;
   margin-bottom: 0;
 }
 
@@ -56,17 +56,14 @@ h1, h2, h3, h4, h5, h6{
   font-size: 15px;
 }
 .middle-section{
-  background: url(../assets/top-bg.png) no-repeat;
-  background-size: cover;
   display: block;
-  min-height: 600px;
   width: 100%;
   text-align: center;
+  max-height: 500px;
 }
 .middle-section .row{
   margin-left: 0;
   margin-right: 0;
-  padding-top: 28%;
 }
 .middle-section .row span{
   font-family: 'Roboto-Bold';
@@ -184,6 +181,32 @@ animation: blink 0.7s infinite;
 
 .testimonial-section .carousel-indicators .active{
   background-color: #f18621;
+}
+
+.technical-stack-section{
+  padding: 40px 0;
+  text-align: center;
+}
+
+.technical-stack-section h1{
+  margin-bottom: 10px;
+}
+
+.technical-stack-section h1 em{
+  font-style: normal;
+  font-family: 'ProximaNovaA-Light'; 
+  display: block; 
+  color: #f18621;
+  font-size: 40px;
+  text-align: center;
+}
+
+.technical-stack-section .change-width{
+  font-size: 17px;
+  margin-bottom: 30px;
+  width: 820px;
+  padding-top: 20px;
+  margin: 0 auto;
 }
 
 .footer-part{
@@ -502,9 +525,11 @@ animation: blink 0.7s infinite;
 .icon a {
   color: #FFFFFF !important;
 }
-
+.heyday-logo{
+  display: inline-block;
+}
 .heyday-logo img{
-  width: 130px;
+  width: 200px;
 }
 
 .recentpost{
@@ -550,3 +575,39 @@ html, body {
 }
 
 /** CSS for the careers page begin **/
+
+#particles-js{
+ width: 100%;
+ height: 100%;
+ background-color: Black;
+ background-image: url('');
+ background-size: cover;
+ background-position: 50% 50%;
+ background-repeat: no-repeat;
+}
+#homeElimenth1{
+  animation-duration: 2000ms;
+}
+#homeElimenth2{
+  animation-duration: 2000ms;
+}
+#footerElimenth{
+  animation-duration: 2000ms;
+}
+#aboutElimenth{
+  animation-duration: 2000ms;
+}
+#servicesElimenth{
+  animation-duration: 1000ms;
+}
+#servicesElimenth3{
+  animation-duration: 1000ms;
+}
+.change_position{
+  position: relative;
+  top: 170px;
+}
+#containerId{
+  position: relative;
+  max-height: 0px;
+}

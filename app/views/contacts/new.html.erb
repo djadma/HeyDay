@@ -1,7 +1,7 @@
 <section class="our-work-content">
   <div class="container">
     <div class="row">
-    <h1 class="text-center">Contact Us</h1>
+    <h1 class="text-center animated fadeInUp" id= "workElimenth3">Contact Us</h1>
       <div class="col-md-6 col-sm-12">
         <div class="contact-form">
           
@@ -30,10 +30,10 @@
         <div class="contact-add-box">
           <ul class="address-details">
             <h3>Our Address</h3>
-            <li><i class="glyphicon glyphicon-map-marker"></i> M14, HeyDay Technologies Mangal </li>
+            <li><i class="glyphicon glyphicon-map-marker"></i> 303, HeyDay Technologies Mangal </li>
              <li class="address">Nagar Road Indore, Madhya Pradesh India.</li>
-            <li><i class="fa fa-phone"></i> +91 14344 </li>
-            <li><i class="glyphicon glyphicon-envelope"> </i>hello@heydaytechnologies.com</li>
+            <li><i class="fa fa-phone"></i>07314972670</li>
+            <li><i class="glyphicon glyphicon-envelope"> </i>contact@heydaytechnologies.com</li>
           </ul>
         </div>
       </div>
@@ -66,9 +66,18 @@
             position: place.geometry.location
           });
           google.maps.event.addListener(marker, 'click', function() {
-            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-              'Place ID: ' + place.place_id + '<br>' +
-              place.formatted_address + '</div>');
+            var degFah = new Array ();
+            degFah = place.formatted_address;
+            var address = new Array ();
+            for (i = 0;  i < 47; i++) {
+              address = address + degFah[i];  
+            }
+            var halfaddress = new Array ();
+            for (j = 48; j < 84; j++) {
+              halfaddress = halfaddress + degFah[j];
+            }
+            infowindow.setContent('<div><strong>' +"HeyDay Technologies" + '</strong><br>' +'303, '+
+              address + '<br>' + halfaddress + '</div>');
             infowindow.open(map, this);
           });
         }
