@@ -611,3 +611,6 @@ html, body {
   position: relative;
   max-height: 0px;
 }
+.email-error-class{
+  color: red;
+}

@@ -5,14 +5,14 @@
       <div class="col-md-6 col-sm-12">
         <div class="contact-form">
           
-          <%= form_for(:contact, url: contact_path) do |f| %>
+          <%= form_for(:contact, url: contact_path, id: "contact-form1") do |f| %>
             <div class="row">
               <div class="comment-box"></div>
               <div class="col-md-6 form-group">
                <%= f.text_field :name, class: "form-control", placeholder: "Name", type:"text", required: :true%>
               </div> 
               <div class="col-md-6 form-group">
-                <%= f.text_field :email, class: "form-control", placeholder: "Email", type:"text", required: :true%>
+                <%= f.text_field :email, class: "form-control email-field-class", placeholder: "Email", type:"text", required: :true%>
               </div>
               <label class="col-md-12 control-label" for="textarea"></label>
 
@@ -20,7 +20,7 @@
                 <%= f.text_area :message, class: "form-control", id: "textarea", required: :true%>
               </div>
               <div class="col-md-8 text-left">
-               <%= f.submit "send message", class: "btn btn btn-warning"%>
+               <%= f.submit "send message", class: "btn btn btn-warning send-mesage-btn"%>
               </div>
             </div>
           <% end %>
@@ -84,6 +84,16 @@
       });
     }
   
+  $(".send-mesage-btn").click(function(){
+    var $email = $('.email-field-class');    
+    var re = /\S+@\S+\.\S+/;    
+    if($email.val() == '' || !re.test($email.val())){      
+      var div = $("<div>").html('Please enter a valid email address.');
+      $(div).addClass('email-error-class');          
+      $(".email-field-class").after($(div));
+      event.preventDefault();      
+    }
+  });
 </script>
 <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8LdHtj702KCU9rC9oSH2CshQABhHS5J0&callback=initMap&libraries=places">
